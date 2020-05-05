@@ -6,6 +6,7 @@
     <description>Recent content in Categories on My Engineering Practices</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
+    <lastBuildDate>Tue, 05 May 2020 00:00:00 +0200</lastBuildDate>
     
         <atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -13,7 +14,7 @@
     <item>
       <title>UI Development in Docker</title>
       <link>/categories/ui-development-in-docker/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 05 May 2020 00:00:00 +0200</pubDate>
       
       <guid>/categories/ui-development-in-docker/</guid>
       <description></description>
