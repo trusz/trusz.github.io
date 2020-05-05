@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>ui on What I&#39;ve learned</title>
+    <title>ui on My Digital Garden</title>
     <link>/tags/ui/</link>
-    <description>Recent content in ui on What I&#39;ve learned</description>
+    <description>Recent content in ui on My Digital Garden</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <lastBuildDate>Tue, 05 May 2020 00:00:00 +0200</lastBuildDate>
