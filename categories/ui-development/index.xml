@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>docker on Tamás Rusz</title>
-    <link>/tags/docker/</link>
-    <description>Recent content in docker on Tamás Rusz</description>
+    <title>UI Development on Tamás Rusz</title>
+    <link>/categories/ui-development/</link>
+    <description>Recent content in UI Development on Tamás Rusz</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <lastBuildDate>Tue, 05 May 2020 00:00:00 +0200</lastBuildDate>
     
-        <atom:link href="/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/categories/ui-development/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>

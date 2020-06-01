@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
-    <loc>http://trusz.github.io/categories/</loc><lastmod>2020-05-05T00:00:00+02:00</lastmod></url><url>
+    <loc>http://trusz.github.io/categories/</loc><lastmod>2020-06-01T00:00:00+02:00</lastmod></url><url>
+    <loc>http://trusz.github.io/tags/file/</loc><lastmod>2020-06-01T00:00:00+02:00</lastmod></url><url>
+    <loc>http://trusz.github.io/posts/file-naming-conventiono/</loc><lastmod>2020-06-01T00:00:00+02:00</lastmod></url><url>
+    <loc>http://trusz.github.io/categories/general/</loc><lastmod>2020-06-01T00:00:00+02:00</lastmod></url><url>
+    <loc>http://trusz.github.io/tags/git/</loc><lastmod>2020-06-01T00:00:00+02:00</lastmod></url><url>
+    <loc>http://trusz.github.io/tags/naming/</loc><lastmod>2020-06-01T00:00:00+02:00</lastmod></url><url>
+    <loc>http://trusz.github.io/posts/</loc><lastmod>2020-06-01T00:00:00+02:00</lastmod></url><url>
+    <loc>http://trusz.github.io/tags/</loc><lastmod>2020-06-01T00:00:00+02:00</lastmod></url><url>
+    <loc>http://trusz.github.io/</loc><lastmod>2020-06-01T00:00:00+02:00</lastmod></url><url>
     <loc>http://trusz.github.io/tags/ci/cd/</loc><lastmod>2020-05-05T00:00:00+02:00</lastmod></url><url>
     <loc>http://trusz.github.io/tags/docker/</loc><lastmod>2020-05-05T00:00:00+02:00</lastmod></url><url>
     <loc>http://trusz.github.io/tags/dx/</loc><lastmod>2020-05-05T00:00:00+02:00</lastmod></url><url>
-    <loc>http://trusz.github.io/</loc><lastmod>2020-05-05T00:00:00+02:00</lastmod></url><url>
-    <loc>http://trusz.github.io/posts/</loc><lastmod>2020-05-05T00:00:00+02:00</lastmod></url><url>
-    <loc>http://trusz.github.io/tags/</loc><lastmod>2020-05-05T00:00:00+02:00</lastmod></url><url>
     <loc>http://trusz.github.io/tags/testing/</loc><lastmod>2020-05-05T00:00:00+02:00</lastmod></url><url>
     <loc>http://trusz.github.io/tags/ui/</loc><lastmod>2020-05-05T00:00:00+02:00</lastmod></url><url>
-    <loc>http://trusz.github.io/categories/ui-development-in-docker/</loc><lastmod>2020-05-05T00:00:00+02:00</lastmod></url><url>
+    <loc>http://trusz.github.io/categories/ui-development/</loc><lastmod>2020-05-05T00:00:00+02:00</lastmod></url><url>
     <loc>http://trusz.github.io/posts/03_ui-development-in-docker-cicd/</loc><lastmod>2020-05-05T00:00:00+02:00</lastmod></url><url>
     <loc>http://trusz.github.io/tags/tdd/</loc><lastmod>2020-05-04T00:00:00+02:00</lastmod></url><url>
     <loc>http://trusz.github.io/posts/02_ui-development-in-docker-testing/</loc><lastmod>2020-05-04T00:00:00+02:00</lastmod></url><url>

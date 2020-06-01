@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>file on Tamás Rusz</title>
+    <link>/tags/file/</link>
+    <description>Recent content in file on Tamás Rusz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Mon, 01 Jun 2020 00:00:00 +0200</lastBuildDate>
+    
+        <atom:link href="/tags/file/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>File Naming Convention</title>
+      <link>/posts/file-naming-conventiono/</link>
+      <pubDate>Mon, 01 Jun 2020 00:00:00 +0200</pubDate>
+      
+      <guid>/posts/file-naming-conventiono/</guid>
+      <description>Summary I use kebab-case instead of camelCase for file names because changing lower
+case letters to capital ones have caused problems in every one of my projects.</description>
+      
+    </item>
+    
+  </channel>
+</rss>
