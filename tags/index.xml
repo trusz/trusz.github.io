@@ -6,10 +6,50 @@
     <description>Recent content in Tags on Tamás Rusz</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Mon, 01 Jun 2020 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 02 Jun 2020 00:00:00 +0200</lastBuildDate>
     
         <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>component</title>
+      <link>/tags/component/</link>
+      <pubDate>Tue, 02 Jun 2020 00:00:00 +0200</pubDate>
+      
+      <guid>/tags/component/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>react</title>
+      <link>/tags/react/</link>
+      <pubDate>Tue, 02 Jun 2020 00:00:00 +0200</pubDate>
+      
+      <guid>/tags/react/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>structure</title>
+      <link>/tags/structure/</link>
+      <pubDate>Tue, 02 Jun 2020 00:00:00 +0200</pubDate>
+      
+      <guid>/tags/structure/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>ui</title>
+      <link>/tags/ui/</link>
+      <pubDate>Tue, 02 Jun 2020 00:00:00 +0200</pubDate>
+      
+      <guid>/tags/ui/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>file</title>
@@ -77,16 +117,6 @@
       <pubDate>Tue, 05 May 2020 00:00:00 +0200</pubDate>
       
       <guid>/tags/testing/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>ui</title>
-      <link>/tags/ui/</link>
-      <pubDate>Tue, 05 May 2020 00:00:00 +0200</pubDate>
-      
-      <guid>/tags/ui/</guid>
       <description></description>
       
     </item>
