@@ -13,10 +13,10 @@
     
     <item>
       <title>File Naming Convention</title>
-      <link>/posts/file-naming-conventiono/</link>
+      <link>/posts/file-naming-convention/</link>
       <pubDate>Mon, 01 Jun 2020 00:00:00 +0200</pubDate>
       
-      <guid>/posts/file-naming-conventiono/</guid>
+      <guid>/posts/file-naming-convention/</guid>
       <description>Summary I use kebab-case instead of camelCase for file names because changing lower
 case letters to capital ones have caused problems in every one of my projects.</description>
       
