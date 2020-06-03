@@ -18,7 +18,7 @@
       
       <guid>/posts/ui-component-file-structure/</guid>
       <description>Summary Basic component file structure:
-src/ └─ components/ └─ &amp;lt;component&amp;gt;/ ├─ index.ts # entrypoint ├─ &amp;lt;componentt&amp;gt;.tsx # main component ├─ &amp;lt;sub-component&amp;gt;.</description>
+src/ └─ components/ └─ &amp;lt;component&amp;gt;/ ├─ index.ts # entrypoint ├─ &amp;lt;component&amp;gt;.tsx # main component ├─ &amp;lt;sub-component&amp;gt;.</description>
       
     </item>
     
