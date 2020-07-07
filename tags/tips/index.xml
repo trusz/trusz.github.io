@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>tips on Tamás Rusz</title>
+    <link>/tags/tips/</link>
+    <description>Recent content in tips on Tamás Rusz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sun, 07 Jun 2020 00:00:00 +0200</lastBuildDate>
+    
+        <atom:link href="/tags/tips/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Monodraw Tip - Anchors</title>
+      <link>/posts/monodraw-tips-anchors/</link>
+      <pubDate>Sun, 07 Jun 2020 00:00:00 +0200</pubDate>
+      
+      <guid>/posts/monodraw-tips-anchors/</guid>
+      <description>I use Monodraw to create my Diagrams. Its anchors feature is really helpful to make diagrams more flexible and easier to change.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

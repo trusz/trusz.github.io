@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.61.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>Monodraw Tip - Anchors&nbsp;&ndash;&nbsp;Tamás Rusz</title><link rel="stylesheet" href="/css/core.min.91b710f32e5884fa199243d8d87fa4bb6d88fa105af93ac5d74bd3f20867493e77b417bd942d915c7bde7edb9d56e4aa.css" integrity="sha384-kbcQ8y5YhPoZkkPY2H&#43;ku22I&#43;hBa&#43;TrF10vT8ghnST53tBe9lC2RXHveftudVuSq"><body>
+    <div class="base-body"><section id="header" class="site header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name">Tamás Rusz</span></a></span>
+        <span class="header right-side"><div class="nav wrap">
+    <nav class="nav"><a class="nav item" href="/about">About</a><a class="nav item" href="/">Posts</a><a class="nav item" href="/categories">Categories</a><a class="nav item" href="/tags">Tags</a><a class="nav item" href="https://github.com/trusz" target="_blank">
+            &nbsp;Github
+        </a>
+    </nav>
+</div></span></div><div class="site slogan"><span class="title">An Engineer's Knowledge Garden</span></div></section><div id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">Monodraw Tip - Anchors</h1><p class="article date">2020-06-07<span class="reading-time"> • 3 minutes to read</span></p></section><article class="article markdown-body"><p><img class="cover" src="/images/monodraw-tips-01-anchor.jpg" alt></p><div class="img-copyright">
+    <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px"
+        href="https://unsplash.com/s/photos/ship-anchor?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener noreferrer"
+        title="Photo by Simon Abrams"><span style="display:inline-block;padding:2px 3px"><svg
+                xmlns="http://www.w3.org/2000/svg"
+                style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white"
+                viewBox="0 0 32 32">
+                <title>Unsplash Logo</title>
+                <path
+                    d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z">
+                </path>
+            </svg></span><span style="display:inline-block;padding:2px 3px">Simon Abrams</span></a>
+</div><p>I use Monodraw to create my Diagrams. Its anchors feature is really helpful to make diagrams more flexible and easier to change.
+There are a few use cases we can implement with them.</p>
+<blockquote>
+<p><a href="https://monodraw.helftone.com/">↗ Monodraw for macOS — Helftone</a></p>
+</blockquote>
+<blockquote>
+<h6 id="table-of-contents">Table of Contents</h6>
+<ul>
+<li><a href="#anchors-and-attachment-points">Anchors and Attachment Points</a></li>
+<li><a href="#aligning-objects">Aligning Objects</a></li>
+<li><a href="#responsive-separators">Responsive Separators</a></li>
+<li><a href="#responsive-diagram-frame">Responsive Diagram Frame</a></li>
+<li><a href="#uml-class-diagram">UML Class Diagram</a></li>
+</ul>
+</blockquote>
+<h2 id="anchors-and-attachment-points">Anchors and Attachment Points</h2>
+<p>In Monodraw every object has one anchor point (left) and multiple attachment points (right).</p>
+<p align=center>
+    <img src="/images/monodraw-tips-01/anchor.png" height=150 />
+    <img src="/images/monodraw-tips-01/attachment_points.png" height=150 />
+</p>
+<p>With the anchor you can anchor an object to another object's attachment point.
+This makes the object &ldquo;stick&rdquo; to the other one.</p>
+<p><img src="/images/monodraw-tips-01/monodraw-anchors-01.gif" alt="gif demonstrating monodraw's anchor feature"></p>
+<p>This enables us to create responsive components.
+Let's see a few use cases</p>
+<h2 id="aligning-objects">Aligning Objects</h2>
+<p>We can align text with the text align option.</p>
+<p><img src="/images/monodraw-tips-01/text_align.png" width=200 /></p>
+<p>However, there is no alignment option for objects.
+But we have anchors! Set the object's anchor point and the parent's attachment point depending on where you want to align the object.
+For example if you want to align the object on the top left side:</p>
+<ol>
+<li>set the object's anchor to the top left<br>
+<img src="/images/monodraw-tips-01/setup_obj_top_left.png" height=140 /></li>
+<li>turn on the parent's top left inner attachment point<br>
+<img src="/images/monodraw-tips-01/setup_top_left.png" height=140 /></li>
+<li>drag the object's anchor point to the parent's attachment point.<br>
+<img src="/images/monodraw-tips-01/monodraw-anchors-02.gif" alt="gif demonstrating attaching object"></li>
+</ol>
+<p>Now you can resize or move the parent the object stays aligned.</p>
+<p><img src="/images/monodraw-tips-01/monodraw-anchors-03.gif" alt="gif demonstrating resizing"></p>
+<p>Here are all the possible alignment positions configured:</p>
+<p><img src="/images/monodraw-tips-01/monodraw-anchors-04.gif" alt="gif demonstrating all alignments"></p>
+<h2 id="responsive-separators">Responsive Separators</h2>
+<p>Responsive separators are really useful when onw wants to isolate text within an object. We will se examples at the end.</p>
+<p>So how to configure them? This will require a few tricks.
+Let's say we want to separate the name of the box from the rest of it like this:</p>
+<p align=center>
+    <img alt="responsive separator" src="/images/monodraw-tips-01/responsive-separator.png" width=250 />
+</p>
+<ol>
+<li>Create a rect and turn off text and fill.</li>
+<li>Turn on the top left inner and top right inner attachment points and turn off every other.<br>
+<img src="/images/monodraw-tips-01/sep_config_01.png" height=400 /></li>
+<li>Create two 3x3 boxes. We will call them ports.</li>
+<li>Configure one port to have a bottom-left inner attachment point and a top-left anchor.<br>
+<img src="/images/monodraw-tips-01/sep_port_left.png" width=200 /></li>
+<li>Configure the other port to have bottom-right attachment point and a top-right anchor.<br>
+<img src="/images/monodraw-tips-01/sep_port_right.png" width=200 /></li>
+<li>Attach the ports to the parent.<br>
+<img src="/images/monodraw-tips-01/monodraw-anchors-05.gif" alt="gif demonstrating attaching port to parent"></li>
+<li>Draw a line without arrows from the left port to the right port.<br>
+<img src="/images/monodraw-tips-01/monodraw-anchors-06.gif" alt="gif demonstrating drawing line between ports"></li>
+<li>Remove fill and border from ports.<br>
+<img src="/images/monodraw-tips-01/monodraw-anchors-07.gif" alt="gif demonstrating removing fill and border"></li>
+<li>Add a borderless text and align in the top center.<br>
+<img src="/images/monodraw-tips-01/monodraw-anchors-08.gif" alt="gif demonstrating adding text"></li>
+<li>Configure a new box to have:
+<ul>
+<li>text align: top left</li>
+<li>no fill</li>
+<li>no border</li>
+<li>anchor offset x=1 y=1</li>
+</ul>
+</li>
+<li>Attach the text to the left port.<br>
+<img src="/images/monodraw-tips-01/monodraw-anchors-09.gif" alt="gif demonstrating adding body text"></li>
+</ol>
+<p>Now you have a responsive text box with title and body:</p>
+<p><img src="/images/monodraw-tips-01/monodraw-anchors-10.gif" alt="gif demonstrating a responsive text box with title and body"></p>
+<h2 id="responsive-diagram-frame">Responsive Diagram Frame</h2>
+<p>I usually frame the diagrams to provide a few metadata about the project security level and company. With the object alignment and responsive separator I could create a nice resizable frame.</p>
+<p><img src="/images/monodraw-tips-01/monodraw-anchors-resp-frame.gif" alt="gif demonstrating a responsive frame"></p>
+<h2 id="uml-class-diagram">UML Class Diagram</h2>
+<p>Sometimes I still need an UML Class diagram. This is can be also nicely done. Here I use a responsive separator for the class name on the top and one in the middle to separate the class members and functions.</p>
+<p><img src="/images/monodraw-tips-01/monodraw-anchors-uml-class.gif" alt="gif demonstrating an UML Class Diagram"></p>
+</article><section class="article labels"><a class="category" href=/categories/tool/>Tool</a><a class="tag" href=/tags/monodraw/>monodraw</a><a class="tag" href=/tags/tips/>tips</a></section></div><section class="article navigation"><p><a class="link" href="/posts/ui-component-file-structure/"><span class="li">&rarr;</span>UI Components' File Structure</a></p></section></div><section id="footer" class="footer"><div class="footer-wrap">
+    <p class="copyright">Tamás Rusz</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></section></div>
+</body>
+
+</html>
