@@ -6,10 +6,21 @@
     <description>Recent content in ui on Tamás Rusz</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Tue, 02 Jun 2020 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 19 May 2021 00:00:00 +0200</lastBuildDate>
     
         <atom:link href="/tags/ui/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Barrel Pattern in TypeScript</title>
+      <link>/posts/barrel-pattern-in-typescript/</link>
+      <pubDate>Wed, 19 May 2021 00:00:00 +0200</pubDate>
+      
+      <guid>/posts/barrel-pattern-in-typescript/</guid>
+      <description>Handling folders in JavaScript/TypeScript projects as packages makes encapsulation easier and the structure clearer.
+ Table of Contents  Barrel Pattern  Rules     Barrel Pattern In the followings I&#39;ll use TypeScript but the pattern is almost identical for JavaScript.</description>
+      
+    </item>
     
     <item>
       <title>UI Components&#39; File Structure</title>

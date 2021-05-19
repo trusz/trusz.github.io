@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.61.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>Barrel Pattern in TypeScript&nbsp;&ndash;&nbsp;Tamás Rusz</title><link rel="stylesheet" href="/css/core.min.092184f8487d428f2b8b9b487f14b94c82ce2a46c62ff624ce5fa781f7667521ce3df40f28f3528127a571cee3ec930b.css" integrity="sha384-CSGE&#43;Eh9Qo8ri5tIfxS5TILOKkbGL/Ykzl&#43;ngfdmdSHOPfQPKPNSgSelcc7j7JML"><body>
+    <div class="base-body"><section id="header" class="site header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name">Tamás Rusz</span></a></span>
+        <span class="header right-side"><div class="nav wrap">
+    <nav class="nav"><a class="nav item" href="/about">About</a><a class="nav item" href="/">Posts</a><a class="nav item" href="/categories">Categories</a><a class="nav item" href="/tags">Tags</a><a class="nav item" href="https://github.com/trusz" target="_blank">
+            &nbsp;Github
+        </a>
+    </nav>
+</div></span></div><div class="site slogan"><span class="title">An Engineer's Knowledge Garden</span></div></section><div id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">Barrel Pattern in TypeScript</h1><p class="article date">2021-05-19<span class="reading-time"> • 2 minutes to read</span></p></section><article class="article markdown-body"><p><img class="cover" src="/images/barrel-pattern-in-typescript_vince-veras-Hh3-he9zRQA-unsplash.jpg" alt></p><div class="img-copyright">
+    <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px"
+        href="https://unsplash.com/@vinceveras?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener noreferrer"
+        title="Photo by Vince Veras"><span style="display:inline-block;padding:2px 3px"><svg
+                xmlns="http://www.w3.org/2000/svg"
+                style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white"
+                viewBox="0 0 32 32">
+                <title>Unsplash Logo</title>
+                <path
+                    d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z">
+                </path>
+            </svg></span><span style="display:inline-block;padding:2px 3px">Vince Veras</span></a>
+</div><p>Handling folders in JavaScript/TypeScript projects as packages makes encapsulation
+easier and the structure clearer.</p>
+<blockquote>
+<h6 id="table-of-contents">Table of Contents</h6>
+<ul>
+<li><a href="#barrel-pattern">Barrel Pattern</a>
+<ul>
+<li><a href="#rules">Rules</a></li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h2 id="barrel-pattern">Barrel Pattern</h2>
+<p>In the followings I'll use TypeScript but the pattern is almost identical for JavaScript.</p>
+<p>In the barrel pattern a folder re-exports items from its files and sub-folders<br>
+through an <code>index.ts</code> file, like a barrel and its tap. This makes the code more readable and, if used correctly, more robust because internals of a package/folder do not leak out and we use only that is made public through the <code>index.ts</code>.</p>
+<p>In short, <code>index.ts</code> defines a folder's/package's public API.</p>
+<h3 id="rules">Rules</h3>
+<details open>
+  <summary>A folder is a package if it contains an <code>index.ts</code>.</summary>
+<div class="highlight"><pre class="chroma"><code class="language-txt" data-lang="txt">package-one/
+└─index.ts
+</code></pre></div></details>
+<details>
+  <summary>
+    A package can have sub-packages.
+  </summary>
+<div class="highlight"><pre class="chroma"><code class="language-txt" data-lang="txt"> package-one/
+ ├─index.ts       
+ └─package-two/   
+   └─index.ts
+</code></pre></div></details>
+<details>
+  <summary>
+    A package can import items from its direct sub-packages.
+  </summary>
+<div class="highlight"><pre class="chroma"><code class="language-txt" data-lang="txt">
+root/
+├── main.ts
+└── restaurant/
+   ├── index.ts
+   ├── prepare.ts
+   └── food/
+       ├── index.ts
+       └── food.ts
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-ts" data-lang="ts"><span class="c1">// main.ts
+</span><span class="c1"></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">prepare</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;./restaurant&#39;</span>
+
+<span class="kr">const</span> <span class="nx">pizza</span> <span class="o">=</span> <span class="p">.</span><span class="p">.</span><span class="p">.</span>
+<span class="nx">prepare</span><span class="p">(</span><span class="nx">pizza</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-ts" data-lang="ts"><span class="c1">// restaurant/index.ts
+</span><span class="c1"></span><span class="kr">export</span> <span class="p">{</span> <span class="nx">prepare</span> <span class="p">}</span> <span class="nx">from</span> <span class="err">&#39;</span><span class="p">.</span><span class="o">/</span><span class="nx">prepare</span><span class="p">.</span><span class="nx">ts</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-ts" data-lang="ts"><span class="c1">// restaurant/prepare.ts
+</span><span class="c1"></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">Food</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;./food&#39;</span>
+
+<span class="kr">export</span> <span class="kd">function</span> <span class="nx">prepare</span><span class="p">(</span><span class="nx">food</span>: <span class="kt">Food</span><span class="p">)</span><span class="p">{</span> <span class="p">.</span><span class="p">.</span><span class="p">.</span> <span class="p">}</span>
+
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-ts" data-lang="ts"><span class="c1">// restaurant/food/index.ts
+</span><span class="c1"></span><span class="kr">export</span> <span class="p">{</span> <span class="nx">Food</span> <span class="p">}</span> <span class="nx">from</span> <span class="err">&#39;</span><span class="p">.</span><span class="o">/</span><span class="nx">food</span><span class="p">.</span><span class="nx">ts</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-ts" data-lang="ts"><span class="c1">// restaurant/food/food.ts
+</span><span class="c1"></span><span class="kr">export</span> <span class="kr">interface</span> <span class="nx">Food</span><span class="p">{</span> <span class="p">.</span><span class="p">.</span><span class="p">.</span> <span class="p">}</span>
+</code></pre></div></details>
+<details>
+  <summary>
+    A package can re-export items from its direct subpackages, 
+    but not from sub-packages of its direct sub-packages.
+  </summary>
+<div class="highlight"><pre class="chroma"><code class="language-txt" data-lang="txt">
+root/
+└── restaurant/
+   ├── index.ts
+   └── food/
+       ├── index.ts
+       └── pizzas/
+           ├── index.ts
+           └── margherita.ts
+
+
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-ts" data-lang="ts"><span class="c1">// restaurant/index.ts
+</span><span class="c1"></span>
+<span class="c1">// GOOD:
+</span><span class="c1"></span><span class="kr">export</span> <span class="p">{</span> <span class="nx">PizzaMargherita</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;./food&#39;</span>
+
+<span class="c1">// BAD:
+</span><span class="c1"></span><span class="kr">export</span> <span class="p">{</span> <span class="nx">margherita</span> <span class="kr">as</span> <span class="nx">PizzaMargherita</span><span class="p">}</span> <span class="nx">from</span> <span class="err">&#39;</span><span class="p">.</span><span class="o">/</span><span class="nx">food</span><span class="o">/</span><span class="nx">pizzas</span><span class="o">/</span><span class="nx">margherita</span><span class="p">.</span><span class="nx">ts</span>
+
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-ts" data-lang="ts"><span class="c1">// restaurant/food/index.ts
+</span><span class="c1"></span><span class="kr">export</span> <span class="p">{</span> <span class="nx">margherita</span> <span class="kr">as</span> <span class="nx">PizzaMargherita</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;./pizzas&#39;</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-ts" data-lang="ts"><span class="c1">// restaurant/food/pizzas/index.ts
+</span><span class="c1"></span><span class="kr">export</span> <span class="p">{</span> <span class="nx">margherita</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;./margherita.ts&#39;</span>
+</code></pre></div></details>
+<details>
+  <summary>
+    If a folder does not have an `index.ts` it is not a package and other packages can import from its sub-folders.
+  </summary>
+<div class="highlight"><pre class="chroma"><code class="language-txt" data-lang="txt">
+root/
+├── main.ts
+└── x
+   ├── types/
+   │   ├── index.ts
+   │   └── user.ts
+   └── log
+       ├── index.ts
+       ├── console.ts
+       └── file.ts
+
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-ts" data-lang="ts"><span class="c1">// main.ts
+</span><span class="c1"></span>
+<span class="c1">// &#39;x&#39; does not have an `index.ts` therefore not a package
+</span><span class="c1"></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">User</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;./x/types&#39;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">FileLogger</span><span class="p">,</span> <span class="nx">ConsoleLogger</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;./x/log&#39;</span>
+
+<span class="kr">const</span> <span class="nx">fileLogger</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FileLogger</span><span class="p">(</span><span class="s1">&#39;./log.txt&#39;</span><span class="p">)</span>
+<span class="kr">const</span> <span class="nx">consoleLogger</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ConsoleLogger</span><span class="p">(</span><span class="p">)</span>
+
+<span class="kr">const</span> <span class="nx">user</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">User</span><span class="p">(</span><span class="p">)</span>
+
+<span class="nx">fileLogger</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">user</span><span class="p">)</span>
+<span class="nx">consoleLogger</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">user</span><span class="p">)</span>
+
+</code></pre></div></details></article><section class="article labels"><a class="category" href=/categories/typescript/>TypeScript</a><a class="tag" href=/tags/ui/>ui</a><a class="tag" href=/tags/typescript/>typescript</a><a class="tag" href=/tags/javascript/>javascript</a><a class="tag" href=/tags/package/>package</a><a class="tag" href=/tags/pattern/>pattern</a><a class="tag" href=/tags/architecture/>architecture</a></section></div><section class="article navigation"><p><a class="link" href="/posts/monodraw-tips-anchors/"><span class="li">&rarr;</span>Monodraw Tip - Anchors</a></p></section></div><section id="footer" class="footer"><div class="footer-wrap">
+    <p class="copyright">Tamás Rusz</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></section></div>
+</body>
+
+</html>

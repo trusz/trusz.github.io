@@ -6,10 +6,70 @@
     <description>Recent content in Tags on Tamás Rusz</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Tue, 07 Jul 2020 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 19 May 2021 00:00:00 +0200</lastBuildDate>
     
         <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>architecture</title>
+      <link>/tags/architecture/</link>
+      <pubDate>Wed, 19 May 2021 00:00:00 +0200</pubDate>
+      
+      <guid>/tags/architecture/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>javascript</title>
+      <link>/tags/javascript/</link>
+      <pubDate>Wed, 19 May 2021 00:00:00 +0200</pubDate>
+      
+      <guid>/tags/javascript/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>package</title>
+      <link>/tags/package/</link>
+      <pubDate>Wed, 19 May 2021 00:00:00 +0200</pubDate>
+      
+      <guid>/tags/package/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>pattern</title>
+      <link>/tags/pattern/</link>
+      <pubDate>Wed, 19 May 2021 00:00:00 +0200</pubDate>
+      
+      <guid>/tags/pattern/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>typescript</title>
+      <link>/tags/typescript/</link>
+      <pubDate>Wed, 19 May 2021 00:00:00 +0200</pubDate>
+      
+      <guid>/tags/typescript/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>ui</title>
+      <link>/tags/ui/</link>
+      <pubDate>Wed, 19 May 2021 00:00:00 +0200</pubDate>
+      
+      <guid>/tags/ui/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>monodraw</title>
@@ -57,16 +117,6 @@
       <pubDate>Tue, 02 Jun 2020 00:00:00 +0200</pubDate>
       
       <guid>/tags/structure/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>ui</title>
-      <link>/tags/ui/</link>
-      <pubDate>Tue, 02 Jun 2020 00:00:00 +0200</pubDate>
-      
-      <guid>/tags/ui/</guid>
       <description></description>
       
     </item>
