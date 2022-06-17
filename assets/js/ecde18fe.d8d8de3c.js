@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[893],{4280:function(e){e.exports=JSON.parse('{"title":"Go","slug":"/category/go","permalink":"/garden/snippets/category/go","navigation":{"previous":{"title":"Snippets","permalink":"/garden/snippets/intro"},"next":{"title":"Assert","permalink":"/garden/snippets/go/assert"}}}')}}]);
