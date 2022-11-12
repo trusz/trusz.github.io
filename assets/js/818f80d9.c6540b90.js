@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[906],{7589:function(e){e.exports=JSON.parse('{"name":"docusaurus-plugin-content-docs","id":"tech-radar"}')}}]);
