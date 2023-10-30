@@ -1,0 +1,3 @@
+import{s as d,n as o}from"../chunks/scheduler.63274e7e.js";import{S as h,i as u,g as p,s as x,h as c,x as f,c as v,a as i,f as l}from"../chunks/index.6ea29b8c.js";function C(_){let e,r="Welcome!",n,a,m=`I am Tamás, a software engineer, and I work at 
+	<a target="_blank" href="https://sprinteins.com">SprintEins</a> 
+	as Domain Lead of Domain Development.`;return{c(){e=p("h1"),e.textContent=r,n=x(),a=p("p"),a.innerHTML=m},l(t){e=c(t,"H1",{"data-svelte-h":!0}),f(e)!=="svelte-w9d2nb"&&(e.textContent=r),n=v(t),a=c(t,"P",{"data-svelte-h":!0}),f(a)!=="svelte-s4b3k1"&&(a.innerHTML=m)},m(t,s){i(t,e,s),i(t,n,s),i(t,a,s)},p:o,i:o,o,d(t){t&&(l(e),l(n),l(a))}}}class k extends h{constructor(e){super(),u(this,e,null,C,d,{})}}export{k as component};

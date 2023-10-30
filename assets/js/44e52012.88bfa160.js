@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[600],{1375:function(e){e.exports=JSON.parse('{"title":"Front End","slug":"/category/front-end","permalink":"/garden/guides/category/front-end","navigation":{"previous":{"title":"Guides","permalink":"/garden/guides/intro"},"next":{"title":"Barrel Pattern","permalink":"/garden/guides/frontend/barrel-pattern"}}}')}}]);
